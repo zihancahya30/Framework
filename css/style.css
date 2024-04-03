@@ -1,0 +1,158 @@
+/*variables*/
+:root {
+    --violet: rgba(138, 43, 226, 1);
+    --dark-violet: #9400d3:
+}
+
+/*Global*/
+section {
+    padding: 50px 0 100px;
+}
+
+/* Custom CSS style */
+.bg-violet {
+    background: var(--violet) !important;
+}
+
+.bg-darkviolet {
+    background: var(--dark-violet) !important;
+}
+
+.text-violet {
+    color: var(--violet) !important;
+}
+
+.border-violet {
+    border: 2px solid var(--violet) !important;
+}
+
+a.bg-violet:hover {
+    background-color: var(--dark-violet) !important;
+}
+
+a.border-violet {
+    border: 2px solid var(--dark-violet) !important;
+}
+
+/*Hero Section*/
+#hero-section {
+    background: url('Assets/img/1.jpg') no-repeat;
+    background-size: cover;
+    height: 500px;
+    position: relative;
+    padding: 0;
+}
+
+#hero-section::after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(75, 0, 130, 0.6);
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    z-index: 0;
+}
+
+#hero-section .row {
+    position: absolute;
+    z-index: 1;
+}
+
+#hero-section h1 {
+    margin-top: 100px;
+}
+
+/*Values Product*/
+
+/*Buy*/
+#buy .links {
+    column-gap: 2rem;
+}
+
+/*footer*/
+#footer-info {
+    background: rgba(138, 43, 226, 0.075);
+}
+
+#footer-info .sosmed-icon {
+    height: 40px;
+    width: 40px;
+}
+
+/*Mobile*/
+@media (max-width: 768px) {
+    #buy .links {
+        row-gap: 1rem;
+    }
+}
+
+#buy .links a {
+    width: 200px;
+}
+
+/*dekstop*/
+@media (min-width: 992px) {
+    /*Values Product*/
+    #values-product img {
+        height: auto;
+        width: 100%;
+    }
+
+    #values-product .detail {
+        width: 100%;
+    }
+}
+
+/*Product*/
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin: 80px;
+    align-items: center;
+    grid-gap: 30px;
+ }
+ img {
+     object-fit: cover;  
+ }
+ .grid > article {
+     box-shadow: 5px 5px 5px 0px black;
+     border-radius: 20px;
+     text-align: center;
+     background: whitesmoke;
+     width: 300px;
+     height: 335px;
+     transition: transform;
+ }
+ .grid > article img{
+     border-top-left-radius: 20px;
+     border-top-right-radius: 20px;
+     width: 300px;
+     height: 210px;
+ }
+ .konten {
+     cursor: progress;
+ }
+ .grid > article:hover {
+     transform: rotate(15deg);
+     transform: scale(1.2); /*zoom out*/
+     transform: translate(50px);/*geser*/
+ }
+ @media (max-width:1000px) {
+     .grid {
+         grid-template-columns: repeat(2,1fr);
+     }
+ }
+
+ /*About*/
+ .about-section {
+    padding: 50px 0;
+    text-align: center;
+  }
+  .about-section h2 {
+    margin-bottom: 30px;
+  }
+  .about-section p {
+    font-size: 18px;
+  }
